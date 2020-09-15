@@ -1,0 +1,267 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+}
+button.btn {
+    border-radius: 50px;
+    box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.25);
+    font-size: 30px;
+    font-weight: 500;
+}
+button.btn.btn-primary {
+    background-color: #023E8A;
+    border: 0;
+}
+.screen {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+}
+.splash-screen {
+    background-color: #CAF0F8;
+}
+button {
+    margin: auto;
+    min-width: 48%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+.splash-logo {
+    border-radius: 100%;
+    border: 15px solid transparent;
+    width: 60%;
+    height: auto;
+    animation: 2s linear 0s 1 load-circle forwards;
+    background-color: #00B4D8;
+    display: flex;
+    margin: auto;
+    box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.25);
+    padding: 5%;
+}
+@keyframes load-circle {
+    0% {
+    }
+    25% {
+        border-top-color: #023E8A;
+    }
+    50% {
+        border-top-color: #023E8A;
+        border-right-color: #023E8A;
+    }
+    75% {
+        border-top-color: #023E8A;
+        border-right-color: #023E8A;
+        border-bottom-color: #023E8A;
+    }
+    100%{
+        border-color: #023E8A;
+    }
+}
+.splash-logo img {
+    margin: auto;
+    width: 100%;
+}
+.game-screen {
+    display: none;
+    width: 100%;
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
+
+.game-screen .progress-animated {
+    margin: auto;
+    -webkit-animation: loader-animation 3s;
+    animation: loader-animation 3s forwards;
+    animation-timing-function: step-end;
+}
+.game-screen .answer-buttons {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+}
+.game-screen.failed .answer-buttons .btn.correct-answer {
+    background-color: #00B4D8;
+    animation: none;
+}
+.game-screen.failed .answer-buttons .btn.wrong-answer {
+    background-color: #FF006E;
+    animation: none;
+}
+.game-screen.failed .answer-buttons .btn {
+    background-color: #CAF0F8;
+    color: #023e8a;
+    animation: none;
+}
+.game-screen .question {
+    margin: auto;
+    font-size: 100px;
+    color: #023e8a;
+    letter-spacing: 20px;
+}
+
+.game-screen .timer {
+    margin: auto;
+    font-size: 40px;
+    color: #023e8a;
+}
+.game-screen.failed .question {
+    color: white;
+}
+.game-screen.failed .timer {
+    color: white;
+}
+.game-screen .timer .sec, .game-screen .timer .ms {
+    font-size: 80px;
+}
+.game-screen.failed {
+    background-color: #023e8a;
+}
+.game-screen.failed .answer-buttons .btn {
+    opacity: 1;
+}
+
+.game-over-screen {
+    display: none;
+    width: 100%;
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
+
+@keyframes loader-animation {
+    0%{background:linear-gradient(to right, #023E8A 0%, #023E8A 100%, #CAF0F8 100%);}
+    1%{background:linear-gradient(to right, #023E8A 0%, #023E8A 99%, #CAF0F8 99%);}
+    2%{background:linear-gradient(to right, #023E8A 0%, #023E8A 98%, #CAF0F8 98%);}
+    3%{background:linear-gradient(to right, #023E8A 0%, #023E8A 97%, #CAF0F8 97%);}
+    4%{background:linear-gradient(to right, #023E8A 0%, #023E8A 96%, #CAF0F8 96%);}
+    5%{background:linear-gradient(to right, #023E8A 0%, #023E8A 95%, #CAF0F8 95%);}
+    6%{background:linear-gradient(to right, #023E8A 0%, #023E8A 94%, #CAF0F8 94%);}
+    7%{background:linear-gradient(to right, #023E8A 0%, #023E8A 93%, #CAF0F8 93%);}
+    8%{background:linear-gradient(to right, #023E8A 0%, #023E8A 92%, #CAF0F8 92%);}
+    9%{background:linear-gradient(to right, #023E8A 0%, #023E8A 91%, #CAF0F8 91%);}
+    10%{background:linear-gradient(to right, #023E8A 0%, #023E8A 90%, #CAF0F8 90%);}
+    11%{background:linear-gradient(to right, #023E8A 0%, #023E8A 89%, #CAF0F8 89%);}
+    12%{background:linear-gradient(to right, #023E8A 0%, #023E8A 88%, #CAF0F8 88%);}
+    13%{background:linear-gradient(to right, #023E8A 0%, #023E8A 87%, #CAF0F8 87%);}
+    14%{background:linear-gradient(to right, #023E8A 0%, #023E8A 86%, #CAF0F8 86%);}
+    15%{background:linear-gradient(to right, #023E8A 0%, #023E8A 85%, #CAF0F8 85%);}
+    16%{background:linear-gradient(to right, #023E8A 0%, #023E8A 84%, #CAF0F8 84%);}
+    17%{background:linear-gradient(to right, #023E8A 0%, #023E8A 83%, #CAF0F8 83%);}
+    18%{background:linear-gradient(to right, #023E8A 0%, #023E8A 82%, #CAF0F8 82%);}
+    19%{background:linear-gradient(to right, #023E8A 0%, #023E8A 81%, #CAF0F8 81%);}
+    20%{background:linear-gradient(to right, #023E8A 0%, #023E8A 80%, #CAF0F8 80%);}
+    21%{background:linear-gradient(to right, #023E8A 0%, #023E8A 79%, #CAF0F8 79%);}
+    22%{background:linear-gradient(to right, #023E8A 0%, #023E8A 78%, #CAF0F8 78%);}
+    23%{background:linear-gradient(to right, #023E8A 0%, #023E8A 77%, #CAF0F8 77%);}
+    24%{background:linear-gradient(to right, #023E8A 0%, #023E8A 76%, #CAF0F8 76%);}
+    25%{background:linear-gradient(to right, #023E8A 0%, #023E8A 75%, #CAF0F8 75%);}
+    26%{background:linear-gradient(to right, #023E8A 0%, #023E8A 74%, #CAF0F8 74%);}
+    27%{background:linear-gradient(to right, #023E8A 0%, #023E8A 73%, #CAF0F8 73%);}
+    28%{background:linear-gradient(to right, #023E8A 0%, #023E8A 72%, #CAF0F8 72%);}
+    29%{background:linear-gradient(to right, #023E8A 0%, #023E8A 71%, #CAF0F8 71%);}
+    30%{background:linear-gradient(to right, #023E8A 0%, #023E8A 70%, #CAF0F8 70%);}
+    31%{background:linear-gradient(to right, #023E8A 0%, #023E8A 69%, #CAF0F8 69%);}
+    32%{background:linear-gradient(to right, #023E8A 0%, #023E8A 68%, #CAF0F8 68%);}
+    33%{background:linear-gradient(to right, #023E8A 0%, #023E8A 67%, #CAF0F8 67%);}
+    34%{background:linear-gradient(to right, #023E8A 0%, #023E8A 66%, #CAF0F8 66%);}
+    35%{background:linear-gradient(to right, #023E8A 0%, #023E8A 65%, #CAF0F8 65%);}
+    36%{background:linear-gradient(to right, #023E8A 0%, #023E8A 64%, #CAF0F8 64%);}
+    37%{background:linear-gradient(to right, #023E8A 0%, #023E8A 63%, #CAF0F8 63%);}
+    38%{background:linear-gradient(to right, #023E8A 0%, #023E8A 62%, #CAF0F8 62%);}
+    39%{background:linear-gradient(to right, #023E8A 0%, #023E8A 61%, #CAF0F8 61%);}
+    40%{background:linear-gradient(to right, #023E8A 0%, #023E8A 60%, #CAF0F8 60%);}
+    41%{background:linear-gradient(to right, #023E8A 0%, #023E8A 59%, #CAF0F8 59%);}
+    42%{background:linear-gradient(to right, #023E8A 0%, #023E8A 58%, #CAF0F8 58%);}
+    43%{background:linear-gradient(to right, #023E8A 0%, #023E8A 57%, #CAF0F8 57%);}
+    44%{background:linear-gradient(to right, #023E8A 0%, #023E8A 56%, #CAF0F8 56%);}
+    45%{background:linear-gradient(to right, #023E8A 0%, #023E8A 55%, #CAF0F8 55%);}
+    46%{background:linear-gradient(to right, #023E8A 0%, #023E8A 54%, #CAF0F8 54%);}
+    47%{background:linear-gradient(to right, #023E8A 0%, #023E8A 53%, #CAF0F8 53%);}
+    48%{background:linear-gradient(to right, #023E8A 0%, #023E8A 52%, #CAF0F8 52%);}
+    49%{background:linear-gradient(to right, #023E8A 0%, #023E8A 51%, #CAF0F8 51%);}
+    50%{background:linear-gradient(to right, #023E8A 0%, #023E8A 50%, #CAF0F8 50%);}
+    51%{background:linear-gradient(to right, #023E8A 0%, #023E8A 49%, #CAF0F8 49%); color: #023E8A;}
+    52%{background:linear-gradient(to right, #023E8A 0%, #023E8A 48%, #CAF0F8 48%); color: #023E8A;}
+    53%{background:linear-gradient(to right, #023E8A 0%, #023E8A 47%, #CAF0F8 47%); color: #023E8A;}
+    54%{background:linear-gradient(to right, #023E8A 0%, #023E8A 46%, #CAF0F8 46%); color: #023E8A;}
+    55%{background:linear-gradient(to right, #023E8A 0%, #023E8A 45%, #CAF0F8 45%); color: #023E8A;}
+    56%{background:linear-gradient(to right, #023E8A 0%, #023E8A 44%, #CAF0F8 44%); color: #023E8A;}
+    57%{background:linear-gradient(to right, #023E8A 0%, #023E8A 43%, #CAF0F8 43%); color: #023E8A;}
+    58%{background:linear-gradient(to right, #023E8A 0%, #023E8A 42%, #CAF0F8 42%); color: #023E8A;}
+    59%{background:linear-gradient(to right, #023E8A 0%, #023E8A 41%, #CAF0F8 41%); color: #023E8A;}
+    60%{background:linear-gradient(to right, #023E8A 0%, #023E8A 40%, #CAF0F8 40%); color: #023E8A;}
+    61%{background:linear-gradient(to right, #023E8A 0%, #023E8A 39%, #CAF0F8 39%); color: #023E8A;}
+    62%{background:linear-gradient(to right, #023E8A 0%, #023E8A 38%, #CAF0F8 38%); color: #023E8A;}
+    63%{background:linear-gradient(to right, #023E8A 0%, #023E8A 37%, #CAF0F8 37%); color: #023E8A;}
+    64%{background:linear-gradient(to right, #023E8A 0%, #023E8A 36%, #CAF0F8 36%); color: #023E8A;}
+    65%{background:linear-gradient(to right, #023E8A 0%, #023E8A 35%, #CAF0F8 35%); color: #023E8A;}
+    66%{background:linear-gradient(to right, #023E8A 0%, #023E8A 34%, #CAF0F8 34%); color: #023E8A;}
+    67%{background:linear-gradient(to right, #023E8A 0%, #023E8A 33%, #CAF0F8 33%); color: #023E8A;}
+    68%{background:linear-gradient(to right, #023E8A 0%, #023E8A 32%, #CAF0F8 32%); color: #023E8A;}
+    69%{background:linear-gradient(to right, #023E8A 0%, #023E8A 31%, #CAF0F8 31%); color: #023E8A;}
+    70%{background:linear-gradient(to right, #023E8A 0%, #023E8A 30%, #CAF0F8 30%); color: #023E8A;}
+    71%{background:linear-gradient(to right, #023E8A 0%, #023E8A 29%, #CAF0F8 29%); color: #023E8A;}
+    72%{background:linear-gradient(to right, #023E8A 0%, #023E8A 28%, #CAF0F8 28%); color: #023E8A;}
+    73%{background:linear-gradient(to right, #023E8A 0%, #023E8A 27%, #CAF0F8 27%); color: #023E8A;}
+    74%{background:linear-gradient(to right, #023E8A 0%, #023E8A 26%, #CAF0F8 26%); color: #023E8A;}
+    75%{background:linear-gradient(to right, #023E8A 0%, #023E8A 25%, #CAF0F8 25%); color: #023E8A;}
+    76%{background:linear-gradient(to right, #023E8A 0%, #023E8A 24%, #CAF0F8 24%); color: #023E8A;}
+    77%{background:linear-gradient(to right, #023E8A 0%, #023E8A 23%, #CAF0F8 23%); color: #023E8A;}
+    78%{background:linear-gradient(to right, #023E8A 0%, #023E8A 22%, #CAF0F8 22%); color: #023E8A;}
+    79%{background:linear-gradient(to right, #023E8A 0%, #023E8A 21%, #CAF0F8 21%); color: #023E8A;}
+    80%{background:linear-gradient(to right, #023E8A 0%, #023E8A 20%, #CAF0F8 20%); color: #023E8A;}
+    81%{background:linear-gradient(to right, #023E8A 0%, #023E8A 19%, #CAF0F8 19%); color: #023E8A;}
+    82%{background:linear-gradient(to right, #023E8A 0%, #023E8A 18%, #CAF0F8 18%); color: #023E8A;}
+    83%{background:linear-gradient(to right, #023E8A 0%, #023E8A 17%, #CAF0F8 17%); color: #023E8A;}
+    84%{background:linear-gradient(to right, #023E8A 0%, #023E8A 16%, #CAF0F8 16%); color: #023E8A;}
+    85%{background:linear-gradient(to right, #023E8A 0%, #023E8A 15%, #CAF0F8 15%); color: #023E8A;}
+    86%{background:linear-gradient(to right, #023E8A 0%, #023E8A 14%, #CAF0F8 14%); color: #023E8A;}
+    87%{background:linear-gradient(to right, #023E8A 0%, #023E8A 13%, #CAF0F8 13%); color: #023E8A;}
+    88%{background:linear-gradient(to right, #023E8A 0%, #023E8A 12%, #CAF0F8 12%); color: #023E8A;}
+    89%{background:linear-gradient(to right, #023E8A 0%, #023E8A 11%, #CAF0F8 11%); color: #023E8A;}
+    90%{background:linear-gradient(to right, #023E8A 0%, #023E8A 10%, #CAF0F8 10%); color: #023E8A;}
+    91%{background:linear-gradient(to right, #023E8A 0%, #023E8A 9%, #CAF0F8 9%); color: #023E8A;}
+    92%{background:linear-gradient(to right, #023E8A 0%, #023E8A 8%, #CAF0F8 8%); color: #023E8A;}
+    93%{background:linear-gradient(to right, #023E8A 0%, #023E8A 7%, #CAF0F8 7%); color: #023E8A;}
+    94%{background:linear-gradient(to right, #023E8A 0%, #023E8A 6%, #CAF0F8 6%); color: #023E8A;}
+    95%{background:linear-gradient(to right, #023E8A 0%, #023E8A 5%, #CAF0F8 5%); color: #023E8A;}
+    96%{background:linear-gradient(to right, #023E8A 0%, #023E8A 4%, #CAF0F8 4%); color: #023E8A;}
+    97%{background:linear-gradient(to right, #023E8A 0%, #023E8A 3%, #CAF0F8 3%); color: #023E8A;}
+    98%{background:linear-gradient(to right, #023E8A 0%, #023E8A 2%, #CAF0F8 2%); color: #023E8A;}
+    99%{background:linear-gradient(to right, #023E8A 0%, #023E8A 1%, #CAF0F8 1%); color: #023E8A;}
+    100%{background:linear-gradient(to right, #023E8A 0%, #023E8A 0%, #CAF0F8 0%); color: #023E8A;}
+}
+@media (min-width: 991px) {
+    .splash-logo {
+        border-width: 6px;
+        width: 20%;
+        padding: 3%;
+    }
+    button {
+        margin: auto;
+        min-width: 16%;
+        padding-top: 0.4%;
+        padding-bottom: 0.4%;
+    }
+    .game-screen {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .game-screen .question {
+        font-size: 60px;
+    }
+    .game-screen .timer .sec, .game-screen .timer .ms {
+        font-size: 48px;
+    }
+    .game-screen .answer-buttons {
+        min-height: 50%;
+    }
+    .game-screen .btn.progress-animated {
+        min-width: 20%;
+    }
+}
